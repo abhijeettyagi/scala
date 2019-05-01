@@ -1,0 +1,12 @@
+val a = 3
+var pre = 0
+var curr = 1
+println(pre)
+println(curr)
+var res = 0
+for ( e<- 2 to a - 1) {
+  res = pre + curr
+  println(res)
+  pre = curr
+  curr = res
+  }
