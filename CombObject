@@ -1,0 +1,17 @@
+object combination {
+    def fact(num: Int) = {
+      var ans = 1
+      for (i <- num to 1 by -1 )
+        ans = ans * i
+      ans
+    }
+
+    def nCr(n: Int, r: Int) = { fact(n)/(fact(n-r) * fact(r)) }
+  
+  def main(args: Array[String]) {
+    val n = args(0).toInt; val r = args(1).toInt
+//    val n = 5; val r = 4
+    println("There are "+nCr(n, r)+" combinations of "+r+" in "+n+" elements.")
+  }
+}
+
